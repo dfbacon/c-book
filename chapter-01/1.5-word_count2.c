@@ -11,16 +11,14 @@
 
 int main(void)
 {
-	int c, n;
+	int c;
 
 	while ((c = getchar()) != EOF)
 	{
-		putchar(c);
-		while ((n = getchar()) != '\n')
-		{
-			putchar(n);
-		}
+		if (c != ' ')
+			putchar(c);
+		else if (c == ' ')
+			putchar('\n');
 	}
-	putchar('\n');
 	return(0);
 }
